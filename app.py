@@ -6,12 +6,12 @@ import tempfile
 import os
 from ultralytics import YOLO
 import cv2
+import shutil
 
 # Load the YOLOv8 model
 @st.cache_resource
 def load_model():
-    model = YOLO("best.pt")  # Adjust path to your model
-    return model
+    return YOLO("best.pt")  # Make sure this path is correct
 
 model = load_model()
 
@@ -29,13 +29,19 @@ if uploaded_file is not None:
 
     st.image(temp_image_path, caption="📤 Uploaded Image", use_column_width=True)
 
+    # Optional: safely clear previous results
+    try:
+        shutil.rmtree("runs/detect", ignore_errors=True)
+    except Exception as e:
+        st.warning(f"⚠️ Could not clean old results: {e}")
+
     # Run inference with a spinner
     with st.spinner("🔍 Detecting objects..."):
         results = model.predict(source=temp_image_path, conf=0.4, save=True)
 
-    # Get the result image path
-    result_dir = os.path.join("runs", "detect", "predict")
-    result_image_path = os.path.join(result_dir, os.path.basename(temp_image_path))
+    # Get result image path dynamically
+    save_path = results[0].save_dir
+    result_image_path = os.path.join(save_path, os.path.basename(temp_image_path))
 
     if os.path.exists(result_image_path):
         st.success("✅ Detection complete!")
