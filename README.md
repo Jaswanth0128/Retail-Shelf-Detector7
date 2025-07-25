@@ -103,7 +103,9 @@ Images showing bounding boxes and detected labels:
 ![output](https://github.com/user-attachments/assets/34e39ca4-df59-436a-a5d6-c9b0804dbb71)
 ![WhatsApp Image 2025-07-25 at 18 43 50_f432fe6b](https://github.com/user-attachments/assets/3a718465-53a1-44b9-92e9-5b0a477cd1ad)
 ![WhatsApp Image 2025-07-25 at 18 45 03_bfd6a79c](https://github.com/user-attachments/assets/6a48c87a-2e2b-4b5a-a8c7-33152a132b4f)
-<img width="1460" height="1411" alt="image" src="https://github.com/user-attachments/assets/2ee9e4bf-082f-4a5b-9c41-b0863e17cc05" />
+<img width="1460" height="1990" alt="image" src="https://github.com/user-attachments/assets/ded62333-6c95-4c4d-b4f1-8247cb1736fb" />
+<img width="1460" height="1095" alt="image" src="https://github.com/user-attachments/assets/8880ae69-75f7-443c-9b7a-e5ba20c72105" />
+
 
 
 ---
